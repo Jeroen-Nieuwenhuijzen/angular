@@ -18,11 +18,11 @@
         var items = $scope.lunchitems.split(',');
         var realItems = [];
         items.forEach(item => (item.trim() !== "" ? realItems.push(item.trim()) : ""));
-        if (items.length === 0) {
+        if (realItems.length === 0) {
           $scope.result = 'Please enter data first';
           divMessage.css("color", "red");
           inputText.css("border", "3px solid red");
-        } else if (items.length <= 3) {
+        } else if (realItems.length <= 3) {
           $scope.result = 'Enjoy!';
           divMessage.css("color", "green");
           inputText.css("border", "3px solid green");
